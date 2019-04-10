@@ -1,0 +1,92 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="container">
+  <div>
+    <h1>{{ title }}!</h1>
+  </div>
+  <br />
+  <br />
+  <div *ngIf="success" class="alert alert-success">
+    <strong>Success!</strong> Your APP has been created and APP ID: {{id}} , Display name: {{data.name}}
+  </div>
+  <!-- Trigger the modal with a button -->
+  <button
+    type="button"
+    class="btn btn-info btn-lg"
+    data-toggle="modal"
+    data-target="#myModal"
+  >
+    Create App
+  </button>
+  <br />
+</div>
+
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title pull-left">
+          <strong> Create a New App ID</strong>
+        </h3>
+      </div>
+      <div class="modal-body ">
+        <p class="pull-left">
+          Get started Integrating Facebook into your app or website.
+        </p>
+        <div class="row">
+          <div class="col-md-12">
+            <h5>
+              <h5 class="pull-left"><strong>Display Name</strong></h5>
+            </h5>
+          </div>
+          <div class="col-md-12">
+            <input
+              class="pull-left text-box"
+              type="text"
+              [(ngModel)]="appId.name"
+              id="displayName"
+              name="displayName"
+              [value]="appId.name"
+              required
+              placeholder="The name you want to associate with App ID"
+            />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <h5>
+              <h5 class="pull-left"><strong>Contact Email</strong>l</h5>
+            </h5>
+          </div>
+          <div class="col-md-12">
+            <input
+              class="pull-left text-box"
+              type="text"
+              [(ngModel)]="appId.email"
+              id="emailId"
+              name="emailId"
+              [value]="appId.email"
+              required
+              placeholder="Used for Important Communication about your app"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">
+          Close
+        </button>
+        <button
+          type="button"
+          class="btn btn-primary pull-right"
+          data-dismiss="modal"
+          (click)="createAppID()"
+        >
+          Create App ID
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

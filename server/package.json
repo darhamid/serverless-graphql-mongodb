@@ -1,0 +1,49 @@
+{
+  "name": "test-app",
+  "version": "1.0.0",
+  "description": "Cloud Application for demo",
+  "scripts": {
+    "test": "jest",
+    "offline": "sls offline start --port 8000"
+  },
+  "dependencies": {
+    "async": "2.6.0",
+    "change-case": "3.0.1",
+    "cookie": "0.3.1",
+    "graphql": "^0.12.3",
+    "graphql-tools": "^2.14.1",
+    "joi": "^13.0.2",
+    "lodash": "^4.17.11",
+    "mongodb": "^2.2.24",
+    "node-yaml": "^3.2.0",
+    "shortid": "^2.2.8",
+    "yamljs": "0.3.0"
+  },
+  "devDependencies": {
+    "@types/jest": "21.1.4",
+    "@types/node": "8.0.26",
+    "jest": "^24.7.1",
+    "serverless-offline": "3.15.3",
+    "ts-jest": "^24.0.2",
+    "typescript": "2.4.2"
+  },
+  "jest": {
+    "collectCoverage": true,
+    "coverageReporters": [
+      "lcov"
+    ],
+    "collectCoverageFrom": [
+      "**/*.{ts}"
+    ],
+    "coverageDirectory": "./test-coverage",
+    "transform": {
+      "^.+\\.tsx?$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "testRegex": "(/tests/v1/.*|\\.(test|spec))\\.(ts)$",
+    "moduleFileExtensions": [
+      "ts",
+      "js",
+      "tsx"
+    ]
+  }
+}
