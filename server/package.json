@@ -14,7 +14,7 @@
     "graphql-tools": "^2.14.1",
     "joi": "^13.0.2",
     "lodash": "^4.17.11",
-    "mongodb": "^2.2.24",
+    "mongodb": "^3.2.4",
     "node-yaml": "^3.2.0",
     "shortid": "^2.2.8",
     "yamljs": "0.3.0"
